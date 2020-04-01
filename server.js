@@ -14,7 +14,7 @@ mongoose.connect("mongodb+srv://rahat:<PASSWORD>@cluster0-q9dsy.mongodb.net/test
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-var dir = path.join(__dirname, 'public');
+var dir = path.join(__dirname, 'screenshots');
 app.use(express.static(dir));
 
 // mongoose Database Schema

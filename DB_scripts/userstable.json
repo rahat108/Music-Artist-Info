@@ -1,0 +1,10 @@
+{"_id":{"$oid":"5e80b3ba1c9d440000c10b5f"},"name":"prince","email":"prince123@gmail.com","artistsid":["lewis Capaldi"],"songsid":["Grace,Somebody you love,Bruises"],"ratings":[3]}
+{"_id":{"$oid":"5e80b58e1c9d440000c10b61"},"name":"rehman","email":"rehman123@gmail.com","artistsid":["Steve Aoki"],"songsid":["Sweetness,mic drop"],"ratings":[4]}
+{"_id":{"$oid":"5e80b6301c9d440000c10b62"},"name":"hari","email":"hari99@gmail.com","artistsid":["Post Malone"],"songsid":["Sunflowers,Circles"],"ratings":[5]}
+{"_id":{"$oid":"5e83074f1c9d440000f0435b"},"name":"rahat","email":"rahat@gmail.com","artistsid":["Justin Bieber"],"songsid":["hello,Beautiful people,where are you now"],"ratings":[3]}
+{"_id":{"$oid":"5e8307ac1c9d440000f0435c"},"name":"abhinav","email":"abhinavsingh@gmail.com","artistsid":["PnB Rock"],"songsid":["Fire"],"ratings":[3]}
+{"_id":{"$oid":"5e83080e1c9d440000f0435f"},"name":"kartik","email":"kartik087@gmail.com","artistsid":["BTS"],"songsid":["mic drop"],"ratings":[5]}
+{"_id":{"$oid":"5e8308441c9d440000f04360"},"name":"shubham","email":"shubham456@gmail.com","artistsid":["Bruno Mars"],"songsid":["Locked out of heaven,Uptown funk "],"ratings":[5]}
+{"_id":{"$oid":"5e8308a61c9d440000f04361"},"name":"Nitesh","email":"niteshhh@gmail.com","artistsid":["Taylor Swift"],"songsid":["You belong with me,Love story"],"ratings":[5]}
+{"_id":{"$oid":"5e83093f1c9d440000f04363"},"name":"Deepak","email":"deepakbbye@gmail.com","artistsid":["Lady Gaga"],"songsid":["Shallow,Bad Romance,Judas"],"ratings":[3]}
+{"_id":{"$oid":"5e83099a1c9d440000f04365"},"name":"Shivam","email":"shivam@gmail.com","artistsid":["Ed Sheeran"],"songsid":["Shape of you,Beautiful people"],"ratings":[5]}

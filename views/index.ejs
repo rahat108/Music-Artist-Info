@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style type="text/css">
+      .star-rating {
+        line-height:32px;
+        font-size:1.25em;
+      }
+      .table>tbody>tr>td {vertical-align: middle}
+      .star-rating .fa-star{color: yellow;}
+    </style>
+    <title>Spotify Clone</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">Home</a>
+    </nav>
+
+    <div style="margin-top: 20px">
+      <span><h2 style="margin-left: 10px; display: inline-block;">Top Songs</h2>
+      	<a href="song.ejs"><button class="btn btn-dark" style="float: right;margin-right: 20px;">Add Song</button></a></span>
+
+      <table class="table table-sm table-dark" style="margin-top: 16px;">
+        <thead>
+          <tr>
+            <th scope="col">Artwork</th>
+            <th scope="col">Song</th>
+            <th scope="col">Date of Release</th>
+            <th scope="col">Artists</th>
+            <th scope="col">Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0;i<10;i++){   
+          var y=data[i]['value'].toString().split(",")[0]%>
+          <tr><td><img src=<%=iloc[i]%> height="102" width="102"></td><td><%=y%></td><td><%=ral[i]%></td><td><%=data[i]['key']%></td><td>
+          <div class="star-rating">
+            <span class="fa fa-star-o" data-rating="1"></span>
+            <span class="fa fa-star-o" data-rating="2"></span>
+            <span class="fa fa-star-o" data-rating="3"></span>
+            <span class="fa fa-star-o" data-rating="4"></span>
+            <span class="fa fa-star-o" data-rating="5"></span>
+            <input type="hidden" name="whatever1" class="rating-value" value= "0">
+          </div></td></tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top: 20px">
+    	<h2 style="margin-left: 10px; display: inline-block;">Top Artists</h2>
+      <table class="table table-sm table-dark" style="margin-top: 16px" cellpadding="30">
+        <thead>
+          <tr>
+            <th scope="col">Artist</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">Songs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i<data.length; i++) { %>
+		      <tr> <td><%=data[i]['key']%></td><td><%=peda[i]%></td><td><%=data[i]['value']%></td></tr>
+		      <%} %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
+
+<script type="text/javascript">
+  var $star_rating = $('.star-rating .fa');
+  var SetRatingStar = function() {
+    return $star_rating.each(function() {
+      if (parseInt($star_rating.siblings('input.rating-value').val()) >= parseInt($(this).data('rating'))) {
+        return $(this).removeClass('fa-star-o').addClass('fa-star');
+    } else {
+      return $(this).removeClass('fa-star').addClass('fa-star-o');
+    }
+  });
+};
+
+$star_rating.on('click', function() {
+  $star_rating.siblings('input.rating-value').val($(this).data('rating'));
+  return SetRatingStar();
+});
+
+SetRatingStar();
+$(document).ready(function() {
+});
+</script>

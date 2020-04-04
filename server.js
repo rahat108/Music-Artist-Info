@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 const { check} = require('express-validator');
 app.use(session({secret:'XASDASDA'}));
 var ssn;
-//mongodb connect replaced the actual password with <PASSWORD> for security reasons
+//mongodb connect replaced the actual password with <PASSWORD> for security reasons, if password needed mail me at - rahatgupta108@gmail.com
 mongoose.connect("mongodb+srv://rahat:<PASSWORD>@cluster0-q9dsy.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser: true ,useUnifiedTopology: true });
 
 app.use(bodyParser.urlencoded({extended: true}));
